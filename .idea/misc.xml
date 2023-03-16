@@ -4,6 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/layout/activity_create_account.xml" value="0.18177083333333333" />
+        <entry key="app/src/main/res/layout/activity_login_screen.xml" value="0.18177083333333333" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
       </map>
     </option>
   </component>

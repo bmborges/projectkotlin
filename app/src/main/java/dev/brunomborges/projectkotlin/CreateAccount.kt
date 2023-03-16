@@ -55,19 +55,10 @@ class CreateAccount : AppCompatActivity() {
             startActivity(activity);
         }
 
-        findViewById<View>(R.id.Signin).setOnClickListener {
-            Toast.makeText(this, R.string.registro_com_google, Toast.LENGTH_SHORT).show()
-            signInGoogle();
-        }
 
         findViewById<View>(R.id.btnCreateAccount).setOnClickListener {
             signIn()
         }
-    }
-
-    private fun signInGoogle(){
-        val signIntent: Intent = mGoogleSignInClient.signInIntent;
-        startActivityForResult(signIntent, Req_Code);
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -79,16 +70,28 @@ class CreateAccount : AppCompatActivity() {
         }
     }
 
+    private fun sendEmailVerification(){
+        val firebaseUser: FirebaseUser? = firebaseAuth.currentUser
+
+        firebaseUser?.let {
+            it.sendEmailVerification().addOnCompleteListener { task ->
+                if(task.isSuccessful){
+                    Toast.makeText(this, "E-mail enviado com sucesso", Toast.LENGTH_SHORT).show();
+                }
+            }
+        }
+    }
+
     private fun handleResult(completedTask: Task<GoogleSignInAccount>){
         try{
             val account: GoogleSignInAccount? = completedTask.getResult(ApiException::class.java);
-            Toast.makeText(this, "Logado com sucesso", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Login realizado com sucesso", Toast.LENGTH_SHORT).show();
             if(account != null){
                 UpdateUser(account)
             }
         }catch (e: ApiException){
             println(e)
-            Toast.makeText(this, "Falha ao logar", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Falha ao tentar logar", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -141,7 +144,7 @@ class CreateAccount : AppCompatActivity() {
                             if(exception is FirebaseAuthException && exception.errorCode == "ERROR_EMAIL_ALREADY_IN_USE"){
                                 Toast.makeText(this, "Email já cadastrado.", Toast.LENGTH_SHORT).show();
                             }else if(exception is FirebaseAuthException && exception.errorCode == "ERROR_WEAK_PASSWORD"){
-                                Toast.makeText(this, "Senha fraca.", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(this, "Senha não obedece as regras de criação de senha.", Toast.LENGTH_SHORT).show();
                             }else{
                                 Toast.makeText(this, "Erro ao criar usuário.", Toast.LENGTH_SHORT).show();
                             }
@@ -152,22 +155,12 @@ class CreateAccount : AppCompatActivity() {
                     Toast.makeText(this, "As senhas são iguais mas de tamanho inadequado.", Toast.LENGTH_SHORT).show();
                 }
             }else{
-                Toast.makeText(this, "As senhas não coincidem.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "As senhas devem ser iguais.", Toast.LENGTH_SHORT).show();
             }
         }else{
-            Toast.makeText(this, "Preencha todos os campos.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.todos_os_campos_devem_ser_preenchidos, Toast.LENGTH_SHORT).show();
         }
     }
 
-    private fun sendEmailVerification(){
-        val firebaseUser: FirebaseUser? = firebaseAuth.currentUser
 
-        firebaseUser?.let {
-            it.sendEmailVerification().addOnCompleteListener { task ->
-                if(task.isSuccessful){
-                    Toast.makeText(this, "E-mail enviado com sucesso", Toast.LENGTH_SHORT).show();
-                }
-            }
-        }
-    }
 }

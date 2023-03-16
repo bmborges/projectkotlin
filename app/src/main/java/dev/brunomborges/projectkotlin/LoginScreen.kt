@@ -58,10 +58,7 @@ class LoginScreen : AppCompatActivity() {
         }
     }
 
-    private fun signInGoogle(){
-        val signIntent: Intent = mGoogleSignInClient.signInIntent;
-        startActivityForResult(signIntent, Req_Code);
-    }
+
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
@@ -80,7 +77,7 @@ class LoginScreen : AppCompatActivity() {
                 UpdateUser(account)
             }
         }catch (e: ApiException){
-            println(e)
+            error(e)
             Toast.makeText(this, "Falha ao logar", Toast.LENGTH_SHORT).show();
         }
     }
@@ -122,7 +119,12 @@ class LoginScreen : AppCompatActivity() {
                 }
             }
         }else{
-            Toast.makeText(this, "Preencha todos os campos", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, R.string.todos_os_campos_devem_ser_preenchidos, Toast.LENGTH_SHORT).show()
         }
+    }
+
+    private fun signInGoogle(){
+        val signIntent: Intent = mGoogleSignInClient.signInIntent;
+        startActivityForResult(signIntent, Req_Code);
     }
 }

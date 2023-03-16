@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Minhas Tarefas</string>
     <string name="registro_com_google">Registro com Google</string>
-    <string name="login_com_google">Entrar com Google</string>
+    <string name="login_com_google">Google Login</string>
+    <string name="title_tela_login">Tela Login</string>
+    <string name="todos_os_campos_devem_ser_preenchidos">Todos os campos devem ser preenchidos.</string>
 </resources>
