@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace 'dev.tiagosilva.finalprojectclassroom'
+    namespace 'dev.brunomborges.projectkotlin'
     compileSdk 33
 
     defaultConfig {
-        applicationId "dev.tiagosilva.finalprojectclassroom"
+        applicationId "dev.brunomborges.projectkotlin"
         minSdk 26
         targetSdk 33
         versionCode 1
