@@ -14,6 +14,7 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.firebase.auth.FirebaseAuth
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
+import dev.brunomborges.projectkotlin.fragments.WeatherFragment
 
 class MainActivity : AppCompatActivity() {
     private lateinit var sharedPreferences: SharedPreferences
@@ -24,6 +25,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         supportActionBar?.hide()
+
+        supportFragmentManager.beginTransaction().replace(R.id.fragment_container, WeatherFragment()).commit()
 
         sharedPreferences = getSharedPreferences("lista_de_tarefas", Context.MODE_PRIVATE)
 

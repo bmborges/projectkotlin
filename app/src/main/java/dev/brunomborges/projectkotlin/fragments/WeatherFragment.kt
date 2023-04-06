@@ -66,6 +66,8 @@ class WeatherFragment : Fragment() {
     companion object {
         private const val REQUEST_LOCATION_PERMISSION = 1
     }
+    data class WeatherData(val temperature: Double, val description: String, val conditionCode: Int)
+    data class DistrictDate(val city: String, val district: String)
 
     private fun getLocation(view: View){
         val locationManager = requireActivity().getSystemService(Context.LOCATION_SERVICE) as LocationManager

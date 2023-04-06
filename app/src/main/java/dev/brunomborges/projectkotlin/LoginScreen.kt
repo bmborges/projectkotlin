@@ -15,6 +15,8 @@ import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.GoogleAuthProvider
+import dev.brunomborges.projectkotlin.fragments.ChuckNorrisFragment
+import dev.brunomborges.projectkotlin.fragments.WeatherFragment
 
 class LoginScreen : AppCompatActivity() {
 
@@ -29,6 +31,9 @@ class LoginScreen : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login_screen)
         supportActionBar?.hide()
+
+        supportFragmentManager.beginTransaction().replace(R.id.fragment_container_msg_chuck_norris, ChuckNorrisFragment()).commit()
+
 
         etEmail = findViewById<EditText>(R.id.etEmail)
         etPassword = findViewById<EditText>(R.id.etPassword)
