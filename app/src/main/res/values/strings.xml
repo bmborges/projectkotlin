@@ -4,4 +4,6 @@
     <string name="login_com_google">Google Login</string>
     <string name="title_tela_login">Tela Login</string>
     <string name="todos_os_campos_devem_ser_preenchidos">Todos os campos devem ser preenchidos.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
