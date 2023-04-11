@@ -37,18 +37,17 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="packed"/>
 
-    <EditText
+    <fragment
+        android:id="@+id/etPassword"
+        android:name="dev.brunomborges.projectkotlin.fragments.InputPassword"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:hint="Senha*"
-        android:id="@+id/etPassword"
-        android:inputType="textPassword"
-        android:padding="10dp"
         app:layout_constraintBottom_toTopOf="@id/etConfirmPassword"
         app:layout_constraintEnd_toEndOf="@+id/etEmail"
         app:layout_constraintStart_toStartOf="@+id/etEmail"
-        app:layout_constraintTop_toBottomOf="@+id/etEmail"/>
+        app:layout_constraintTop_toBottomOf="@+id/etEmail"
+        />
 
     <EditText
         android:layout_width="0dp"

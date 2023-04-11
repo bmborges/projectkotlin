@@ -24,19 +24,33 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
+<!--    <EditText-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:hint="E-mail*"-->
+<!--        android:id="@+id/etEmail"-->
+<!--        android:inputType="textEmailAddress"-->
+<!--        android:padding="10dp"-->
+<!--        app:layout_constraintBottom_toTopOf="@id/etPassword"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_chainStyle="packed"/>-->
+
+    <fragment
+        android:id="@+id/etEmail"
+        android:name="dev.brunomborges.projectkotlin.fragments.InputEmail"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:hint="E-mail*"
-        android:id="@+id/etEmail"
-        android:inputType="textEmailAddress"
-        android:padding="10dp"
         app:layout_constraintBottom_toTopOf="@id/etPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_chainStyle="packed"/>
+        tools:ignore="MissingConstraints" />
+
+
 
     <EditText
         android:layout_width="0dp"

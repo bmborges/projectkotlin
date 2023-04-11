@@ -16,11 +16,12 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.GoogleAuthProvider
 import dev.brunomborges.projectkotlin.fragments.ChuckNorrisFragment
+import dev.brunomborges.projectkotlin.fragments.InputEmail
 import dev.brunomborges.projectkotlin.fragments.WeatherFragment
 
 class LoginScreen : AppCompatActivity() {
 
-    lateinit var etEmail: EditText
+    lateinit var etEmail: InputEmail
     lateinit var etPassword: EditText
 
     val Req_Code:Int=123;
@@ -35,7 +36,8 @@ class LoginScreen : AppCompatActivity() {
         supportFragmentManager.beginTransaction().replace(R.id.fragment_container_msg_chuck_norris, ChuckNorrisFragment()).commit()
 
 
-        etEmail = findViewById<EditText>(R.id.etEmail)
+        //etEmail = findViewById<EditText>(R.id.etEmail)
+        etEmail = supportFragmentManager.findFragmentById(R.id.etEmail) as InputEmail
         etPassword = findViewById<EditText>(R.id.etPassword)
 
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)

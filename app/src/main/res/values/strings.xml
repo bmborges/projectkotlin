@@ -4,6 +4,12 @@
     <string name="login_com_google">Google Login</string>
     <string name="title_tela_login">Tela Login</string>
     <string name="todos_os_campos_devem_ser_preenchidos">Todos os campos devem ser preenchidos.</string>
+    <string name="sem_senha">Sem senha</string>
+    <string name="senha_muito_fraca">Muito Fraca</string>
+    <string name="senha_fraca">Fraca</string>
+    <string name="senha_media">Média</string>
+    <string name="senha_forte">Forte</string>
+    <string name="senha_muito_forte">Muito Forte</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

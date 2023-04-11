@@ -17,12 +17,13 @@ import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.FirebaseApp
 import com.google.firebase.auth.FirebaseAuthException
 import com.google.firebase.auth.FirebaseUser
+import dev.brunomborges.projectkotlin.fragments.InputPassword
 
 class CreateAccount : AppCompatActivity() {
     lateinit var etEmail: EditText
-    lateinit var etPassword: EditText
+    lateinit var etPassword: InputPassword
     lateinit var etConfirmPassword: EditText
-    lateinit var createAccountInputArray: Array<EditText>
+    lateinit var createAccountInputArray: Array<Any>
 
     val Req_Code:Int=123;
     lateinit var mGoogleSignInClient: GoogleSignInClient;
@@ -37,7 +38,8 @@ class CreateAccount : AppCompatActivity() {
         firebaseAuth = FirebaseAuth.getInstance();
 
         etEmail = findViewById<EditText>(R.id.etEmail)
-        etPassword = findViewById<EditText>(R.id.etPassword)
+//        etPassword = findViewById<EditText>(R.id.etPassword)
+        etPassword = supportFragmentManager.findFragmentById(R.id.etPassword) as InputPassword
         etConfirmPassword = findViewById<EditText>(R.id.etConfirmPassword)
 
         createAccountInputArray = arrayOf(etEmail, etPassword, etConfirmPassword)
