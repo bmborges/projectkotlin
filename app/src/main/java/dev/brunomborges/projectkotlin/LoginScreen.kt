@@ -63,6 +63,11 @@ class LoginScreen : AppCompatActivity() {
         findViewById<View>(R.id.btnEnter).setOnClickListener {
             sign()
         }
+
+        findViewById<View>(R.id.textEsqueci).setOnClickListener {
+            val activity = Intent(this, ForgotPasswordActivity::class.java);
+            startActivity(activity);
+        }
     }
 
 

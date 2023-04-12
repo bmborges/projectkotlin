@@ -5,9 +5,12 @@
       <map>
         <entry key="app/src/main/res/drawable/wi_cloudy.xml" value="0.2005" />
         <entry key="app/src/main/res/layout/activity_create_account.xml" value="0.18177083333333333" />
+        <entry key="app/src/main/res/layout/activity_forgot_password.xml" value="0.2033514492753623" />
         <entry key="app/src/main/res/layout/activity_login_screen.xml" value="0.18177083333333333" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/content_forgot_password.xml" value="0.2033514492753623" />
         <entry key="app/src/main/res/layout/fragment_chuck_norris.xml" value="0.2033514492753623" />
+        <entry key="app/src/main/res/layout/fragment_first.xml" value="0.2033514492753623" />
         <entry key="app/src/main/res/layout/fragment_input_email.xml" value="0.2033514492753623" />
         <entry key="app/src/main/res/layout/fragment_input_password.xml" value="0.2033514492753623" />
         <entry key="app/src/main/res/layout/fragment_weather.xml" value="0.2033514492753623" />
