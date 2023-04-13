@@ -21,6 +21,7 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import dev.brunomborges.projectkotlin.databinding.ActivityTaskBinding
+import dev.brunomborges.projectkotlin.services.NotificationService
 import java.util.*
 import kotlin.collections.HashMap
 
@@ -114,7 +115,7 @@ class TaskActivity : AppCompatActivity() {
     }
 
     private fun scheduleNotification(data: String, hora: String){
-        val intent = Intent(this, NotificationReceiver::class.java)
+        val intent = Intent(this, NotificationService::class.java)
         val title = "Título da notificação"
         val message = "Mensagem da notificação"
 

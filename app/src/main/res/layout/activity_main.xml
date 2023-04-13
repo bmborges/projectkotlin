@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:orientation="vertical">
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appbarLayout"
         android:layout_width="match_parent"
@@ -22,13 +23,29 @@
                 android:src="@drawable/outline_logout_24"
                 android:layout_gravity="right"
                 android:layout_marginEnd="16dp"/>
+            <ImageView
+                android:id="@+id/profile"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:src="@drawable/account_circle_48"
+                android:layout_gravity="right"
+                android:layout_marginEnd="16dp"/>
         </androidx.appcompat.widget.Toolbar>
     </com.google.android.material.appbar.AppBarLayout>
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="60dp">
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:id="@+id/fragment_container_msg_chuck_norris"
+            android:layout_marginTop="30dp"
+
+        />
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -104,5 +121,5 @@
             android:layout_height="match_parent"
             android:layout_below="@+id/subtitleView"
             android:choiceMode="multipleChoice"/>
-    </RelativeLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</LinearLayout>
