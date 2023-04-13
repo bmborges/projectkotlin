@@ -57,12 +57,27 @@ class InputPassword : Fragment() {
                 }else if(text.toString().length < 12) {
                     textViewDifficultyValue.text = resources.getString(R.string.senha_forte)
                 }else {
-                    textViewDifficultyValue.text = resources.getString(R.string.senha_muito_forte)
+                    if(!isValidPassword(text.toString())){
+                        textViewDifficultyValue.text = "Ainda é Possivel Melhorar! informe um numero, uma letra em Maiúsculo"
+                    } else {
+                        textViewDifficultyValue.text = "Agora sim :)"
+                    }
                 }
+
+
             }
         })
 
         return view
+    }
+    internal fun isValidPassword(password: String): Boolean {
+        if (password.length < 8) return false
+        if (password.filter { it.isDigit() }.firstOrNull() == null) return false
+        if (password.filter { it.isLetter() }.filter { it.isUpperCase() }.firstOrNull() == null) return false
+        if (password.filter { it.isLetter() }.filter { it.isLowerCase() }.firstOrNull() == null) return false
+        if (password.filter { !it.isLetterOrDigit() }.firstOrNull() == null) return false
+
+        return true
     }
 
     companion object {

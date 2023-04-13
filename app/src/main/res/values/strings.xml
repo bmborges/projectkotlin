@@ -15,4 +15,9 @@
     <string name="btn_select_date">Data</string>
     <string name="btn_select_hour">Hora</string>
     <string name="save_task">Salvar</string>
+    <string name="e_mail">E-mail</string>
+    <string name="nome">Nome</string>
+    <string name="sobrenome">Sobrenome</string>
+    <string name="atualizar_perfil">Atualizar Perfil</string>
+    <string name="btn_alterar_senha">Alterar senha</string>
 </resources>

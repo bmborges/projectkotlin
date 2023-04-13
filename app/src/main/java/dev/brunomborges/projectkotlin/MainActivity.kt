@@ -89,6 +89,12 @@ class MainActivity : AppCompatActivity() {
             val activity = Intent(this, LoginScreen::class.java);
             startActivity(activity);
         }
+
+        findViewById<View>(R.id.profile).setOnClickListener{
+            val activity = Intent(this, ProfileActivity::class.java);
+            startActivity(activity)
+            finish()
+        }
     }
 
     private fun getData(): ArrayList<String> {
@@ -106,4 +112,6 @@ class MainActivity : AppCompatActivity() {
         editor.putString("lista", arrayJson);
         editor.apply();
     }
+
+
 }

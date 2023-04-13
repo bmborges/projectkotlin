@@ -17,10 +17,12 @@ import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.FirebaseApp
 import com.google.firebase.auth.FirebaseAuthException
 import com.google.firebase.auth.FirebaseUser
+import dev.brunomborges.projectkotlin.fragments.ChuckNorrisFragment
+import dev.brunomborges.projectkotlin.fragments.InputEmail
 import dev.brunomborges.projectkotlin.fragments.InputPassword
 
 class CreateAccount : AppCompatActivity() {
-    lateinit var etEmail: EditText
+    lateinit var etEmail: InputEmail
     lateinit var etPassword: InputPassword
     lateinit var etConfirmPassword: EditText
     lateinit var createAccountInputArray: Array<Any>
@@ -34,11 +36,13 @@ class CreateAccount : AppCompatActivity() {
         setContentView(R.layout.activity_create_account)
         supportActionBar?.hide()
 
+        supportFragmentManager.beginTransaction().replace(R.id.fragment_container_msg_chuck_norris, ChuckNorrisFragment()).commit()
+
+
         FirebaseApp.initializeApp(this)
         firebaseAuth = FirebaseAuth.getInstance();
 
-        etEmail = findViewById<EditText>(R.id.etEmail)
-//        etPassword = findViewById<EditText>(R.id.etPassword)
+        etEmail = supportFragmentManager.findFragmentById(R.id.etEmail) as InputEmail
         etPassword = supportFragmentManager.findFragmentById(R.id.etPassword) as InputPassword
         etConfirmPassword = findViewById<EditText>(R.id.etConfirmPassword)
 
