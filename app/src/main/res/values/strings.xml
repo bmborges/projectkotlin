@@ -20,4 +20,15 @@
     <string name="sobrenome">Sobrenome</string>
     <string name="atualizar_perfil">Atualizar Perfil</string>
     <string name="btn_alterar_senha">Alterar senha</string>
+    <string name="registrar">Register</string>
+    <string name="or">ou</string>
+    <string name="entrar">Entrar</string>
+    <string name="deletar">Deletar</string>
+    <string name="esqueci_minha_senha">Esqueci Minha Senha</string>
+    <string name="lista_de_tarefas">Lista de Tarefas</string>
+
+
+
+
+
 </resources>

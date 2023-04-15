@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".TaskActivity">
 
     <LinearLayout
@@ -98,6 +99,7 @@
             android:layout_height="wrap_content"
             android:text="@string/btn_select_hour"
             />
+
     </LinearLayout>
     <Button
         android:layout_width="match_parent"
@@ -105,9 +107,16 @@
         android:text="@string/save_task"
         android:id="@+id/btn_save_task"
         android:layout_marginHorizontal="20dp"
-        app:layout_constraintEnd_toEndOf="@+id/horaArea"
-        app:layout_constraintStart_toStartOf="@+id/horaArea"
-        app:layout_constraintTop_toBottomOf="@+id/horaArea"
+        app:backgroundTint="#4CAF50"
         />
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/deletar"
+        android:id="@+id/btn_deletar_task"
+        android:layout_marginHorizontal="20dp"
+        app:backgroundTint="@color/red"
+        />
+
+</LinearLayout>

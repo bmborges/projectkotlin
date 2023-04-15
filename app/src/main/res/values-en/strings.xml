@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">My Tasks</string>
+    <string name="registro_com_google">Register With Google</string>
+    <string name="login_com_google">Enter With Google</string>
+    <string name="preencha_todos_os_campos">Set all fields</string>
+    <string name="senha_menor_que_6">Password needs more than 6 characteres</string>
+    <string name="senha_alterada">Password changed!</string>
+    <string name="senhas_nao_conferem">The passwords has difference</string>
+    <string name="btn_alterar_senha">Change password</string>
+    <string name="descricao_task_field">Description</string>
+    <string name="titulo_task_field">Title</string>
+    <string name="btn_select_date">Date</string>
+    <string name="btn_select_hour">Hour</string>
+    <string name="save_task">Save</string>
+    <string name="lista_de_tarefas">Task List</string>
+    <string name="e_mail">E-mail</string>
+    <string name="password">Password</string>
+    <string name="or">or</string>
+    <string name="nome">First Name</string>
+    <string name="entrar">Enter</string>
+    <string name="sobrenome">Last Name</string>
+    <string name="atualizar_perfil">Update Profile</string>
+    <string name="esqueci_minha_senha">Forgot Password</string>
+    <string name="registrar">Register</string>
+    <string name="entrar_com_google">Enter With Google</string>
+    <string name="confirmar_senha">Confirm Password</string>
+    <string name="registrar_com_google">Register With Google</string>
+    <string name="recuperar">Recovery</string>
+    <string name="sem_senha">Without Password</string>
+    <string name="senha_muito_fraca">Very Weak</string>
+    <string name="senha_fraca">Weak</string>
+    <string name="senha_media">Medium</string>
+    <string name="senha_forte">Strong</string>
+    <string name="senha_muito_forte">Very Strong</string>
+    <string name="title_tela_login">Login Screen</string>
+    <string name="deletar">Delete</string>
+
+
+</resources>

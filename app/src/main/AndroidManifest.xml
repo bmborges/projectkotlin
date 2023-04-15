@@ -26,6 +26,9 @@
         <activity
             android:name=".ProfileActivity"
             android:exported="false" />
+        <activity
+            android:name=".TaskActivity"
+            android:exported="false" />
 
         <service
             android:name=".services.NotificationService"
